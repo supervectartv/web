@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>SUPERVECTAR TV WEB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Launcher SUPERVECTAR TV - Deportes, TV, Películas y Series">
+
+<style>
+:root {
+    --bg: #0d1117;
+    --primary: #0a3d62;
+    --text: #e6e6e6;
+    --btn: #1b1f24;
+    --btn-hover: #2c3440;
+    --btn-text: #ffeb3b;
+    --glow: rgba(255, 235, 59, 0.6);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 95vh;
+    width: 95vw;
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--btn-text);
+    text-shadow: 0 0 12px rgba(255, 255, 0, .7);
+    animation: neonTitle 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonTitle {
+    from { text-shadow: 0 0 12px var(--glow); }
+    to { text-shadow: 0 0 25px var(--glow), 0 0 40px var(--glow); }
+}
+
+.icon-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 20px;
+}
+
+.app-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: var(--btn-text);
+    background: var(--btn);
+    font-weight: bold;
+    text-decoration: none;
+    transition: .25s;
+    box-shadow: 0 0 15px #000;
+    border: 1px solid #1f2937;
+}
+
+.app-btn:hover, .app-btn:focus {
+    background: var(--btn-hover);
+    box-shadow: 0 0 12px var(--glow), 0 0 30px var(--glow);
+    outline: none;
+    transform: scale(1.05);
+}
+
+.app-btn:active {
+    transform: scale(.92);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+}
+
+:focus-visible {
+    outline: 3px solid yellow;
+    border-radius: 30px;
+}
+
+/* 📱 Móvil */
+.mobile-ui .app-btn {
+    padding: 20px;
+    font-size: 16px;
+}
+.mobile-ui .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 🖥️ PC (2 columnas, botones grandes, más espacio) */
+.pc-ui .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    padding: 30px;
+}
+
+.pc-ui .app-btn {
+    padding: 40px;
+    font-size: 22px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #000;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.pc-ui .app-btn:hover, .pc-ui .app-btn:focus {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px var(--glow), 0 0 35px var(--glow);
+}
+
+/* 📺 TV */
+.tv-ui .app-btn {
+    padding: 35px;
+    font-size: 24px;
+    border-radius: 30px;
+}
+
+.tv-ui .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tv-ui {
+    cursor: none;
+}
+</style>
+</head>
+
+<body>
+<div class="app-container">
+
+<h1>SUPERVECTAR TV WEB</h1>
+
+<!-- Contador de visitas debajo del título -->
+<center>
+  <a href="https://websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
+    <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=23239">
+  </a>
+  <br>
+</center>
+
+<div class="icon-grid">
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERACE/" target="_blank">
+<img class="icon" src="https://i.ibb.co/LzGF321b/vec-ace.jpg" alt="ACESTREAM DEPORTES"> ACESTREAM DEPORTES
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERACE2/" target="_blank">
+<img class="icon" src="https://i.ibb.co/LzGF321b/vec-ace.jpg" alt="ACESTREAM TV"> ACESTREAM TV
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERVLC/" target="_blank">
+<img class="icon" src="https://i.ibb.co/CKVW2GnC/vlc.png" alt="VLC DEPORTES"> VLC DEPORTES
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERVLC2/" target="_blank">
+<img class="icon" src="https://i.ibb.co/CKVW2GnC/vlc.png" alt="VLC TV"> VLC TV
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERPELIS/" target="_blank">
+<img class="icon" src="https://i.ibb.co/HpTQSGB3/cineseries.png" alt="PELIS "> PELIS
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERPELISES/" target="_blank">
+<img class="icon" src="https://i.ibb.co/HpTQSGB3/cineseries.png" alt="PELIS ESPAÑOLAS"> PELIS ESPAÑOLAS
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERSERIES/" target="_blank">
+<img class="icon" src="https://i.ibb.co/HpTQSGB3/cineseries.png" alt="SERIES"> SERIES
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERPELISSERIESRETRO/" target="_blank">
+<img class="icon" src="https://i.ibb.co/HpTQSGB3/cineseries.png" alt="PELIS Y SERIES RETRO"> PELIS Y SERIES RETRO
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERTVSPAIN/" target="_blank">
+<img class="icon" src="https://i.ibb.co/Fqd6hNjF/tv.png" alt="TV ESPAÑA"> TV ESPAÑA
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERTVMUNDIAL/" target="_blank">
+<img class="icon" src="https://i.ibb.co/Fqd6hNjF/tv.png" alt="TV MUNDIAL"> TV MUNDIAL
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERRADIOSPAIN/" target="_blank">
+<img class="icon" src="https://i.ibb.co/G6hHWQZ/radio.png" alt="RADIO ESPAÑA"> RADIO ESPAÑA
+</a>
+
+<a class="app-btn" href="https://supervectar-coder.github.io/SUPERRADIOMUNDIAL/" target="_blank">
+<img class="icon" src="https://i.ibb.co/G6hHWQZ/radio.png" alt="RADIO MUNDIAL"> RADIO MUNDIAL
+</a>
+
+</div>
+</div>
+
+<script>
+function detectDevice() {
+    const ua = navigator.userAgent.toLowerCase();
+    const isMobile = /android|iphone|ipad|ipod|mobile/.test(ua);
+    const isTV = /smart-tv|smarttv|hbbtv|viera|nettv|appletv|tizen|webos|firetv|googletv|android tv|tv|bravia/.test(ua);
+    const isConsole = /playstation|xbox/.test(ua);
+
+    if (isTV || isConsole) document.body.classList.add("tv-ui");
+    else if (isMobile) document.body.classList.add("mobile-ui");
+    else document.body.classList.add("pc-ui");
+}
+detectDevice();
+</script>
+
+</body>
+</html>
